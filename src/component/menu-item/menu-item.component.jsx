@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 import '../menu-item/menu-item.style.css';
 
-const MenuItem = ({ title, imageUrl, size, history, linkUrl}) => {
+const MenuItem = ({ title, imageUrl, size, linkUrl}) => {
     const navigate = useNavigate();
 
   return (
@@ -14,7 +14,7 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl}) => {
           style={{ backgroundImage: `url( ${imageUrl} )` 
           }}/>
   
-        <div className="content">
+        <div className="content">  
             <h1 className="title">{ title.toUpperCase() }</h1>
             <span className="subtitle">Shop Now</span>
             </div>
