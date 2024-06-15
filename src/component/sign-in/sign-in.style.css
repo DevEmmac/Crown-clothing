@@ -1,0 +1,9 @@
+.sign-in {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    margin: 5px 0;
+}
