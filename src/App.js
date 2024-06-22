@@ -19,19 +19,27 @@ class App extends React.Component {
     }
   }
 
+  // Google authentication
+
+  unsubscribeFromAuth  = null;
+
   componentDidMount() {
-     auth.onAuthStateChanged(user => {
-      this.setState({ currentUser: user});
+     this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
+      this.setState({ currentUser: user });
 
       console.log(user);
-     })
+     });
+  }
+
+  componentWillUnmount() {
+    this.unsubscribeFromAuth();
   }
 
 
   render() {
     return (
       <div>
-        <Header />
+        <Header currentUser={this.state.currentUser}/>
           <Routes>
             <Route exact path='/' Component={HomePage} />
             <Route path='/shop' Component={ShopPage} />
