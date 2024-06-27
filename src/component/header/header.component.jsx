@@ -24,18 +24,15 @@ const Header = ({ currentUser }) => (
             </Link>
 
             <Link className="option" to="/">
-             Check New items
+             Check New items  
             </Link>
 
-            { 
-                currentUser ? 
-                <div className="option" onClick={() => auth.signOut()}> SIGN OUT </div>
-                :
-                <Link className="option" to='/signin'> SIGN IN </Link>
-            }
+            {currentUser ? ( <div className="option" onClick={() => auth.signOut()}>SIGN OUT</div> )
+            : 
+            ( <Link className="option" to='/signin'>SIGN IN</Link> )}
         </div>    
-    
     </div>
-)
+);
+
 
 export default Header;
