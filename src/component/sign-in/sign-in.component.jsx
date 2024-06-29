@@ -64,7 +64,7 @@ import './sign-in.style.css';
                         <CustomButton type="submit"> Sign In </CustomButton>
 
                           <div className="google-sign-in"> 
-                             <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+                             <CustomButton type="button" onClick={signInWithGoogle} isGoogleSignIn>
                                 Sign In with Google
                              </CustomButton>
                            </div>

@@ -26,7 +26,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   // if snapshot doest not exist,this function is to create data in userRef place, we are checking if there's any data. 
   if(!snapShot.exists) {
     const { displayName, email } = userAuth;
-    const createdAt = new Date();
+    const createdAt = new Date();  
 
     try {
       await userRef.set({
@@ -34,7 +34,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         email,
         createdAt,
         ...additionalData
-      })
+      });
     } catch (error) {
       console.log('error creating user', error.message);
     }
