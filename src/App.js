@@ -10,7 +10,6 @@ import Header from './component/header/header.component';
 import SignInAndSignUpPage from './component/pages/sign-in-and-sign-up/sign-in-and-sign-up.component';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.actions';
-// import { current } from '@reduxjs/toolkit' ;
 
 class App extends React.Component {
   unsubscribeFromAuth  = null;
@@ -44,7 +43,6 @@ class App extends React.Component {
             <Routes>
               <Route exact path='/' Component={HomePage} />
               <Route path='/shop' Component={ShopPage} />
-              {/* <Route exact path='/signin' render={() => this.props.currentUser ? (<Navigate to='/'/>) : (<SignInAndSignUpPage />)}/> */}
               <Route path='/signin' element={this.props.currentUser ? <Navigate to='/'/> : <SignInAndSignUpPage/>} />
             </Routes>
       </div>
