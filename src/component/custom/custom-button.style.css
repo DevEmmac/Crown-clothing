@@ -3,7 +3,7 @@
     width: auto;
     height: 50px;
     letter-spacing: 0.5px;
-    padding: 0 35px 0 35px;
+    padding: 1rem 35px;
     font-size: 15px;
     background-color: black;
     color: white;
@@ -12,6 +12,9 @@
     font-weight: bolder;
     border: none;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    border:1px solid red;
 }
 
 .custom-button:hover {
@@ -27,4 +30,17 @@
 .google-sign-in:hover {
     background-color: #357ae8;
     border: none;
+}
+
+.inverted {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.inverted:hover {
+    background-color: black;
+    color: white;
+    border: none; 
+
 }

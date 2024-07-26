@@ -27,7 +27,7 @@ const Header = ({ currentUser, hidden }) => (
             </Link>
             {currentUser ? ( 
                <div className="option" onClick={() => auth.signOut()}>SIGN OUT</div> )
-            : 
+            :  
             ( <Link className="option" to='/signin'>SIGN IN</Link>
       
             )}
@@ -39,6 +39,6 @@ const Header = ({ currentUser, hidden }) => (
 
 const mapStateToProps = ({user: { currentUser }, cart: { hidden }}) => ({
      currentUser,hidden
-})
+});
 
 export default connect(mapStateToProps)(Header);
